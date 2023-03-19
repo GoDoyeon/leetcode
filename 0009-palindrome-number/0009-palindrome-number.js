@@ -4,10 +4,10 @@
  */
 var isPalindrome = function (x) {
   if (x < 0) return false;
-  let arr = Array.from(String(x));
+  let array = Array.from(String(x));
 
-  for (let i = 0; i < arr.length / 2; i++) {
-    if (arr[i] != arr[arr.length - 1 - i]) {
+  for (let i = 0; i < array.length / 2; i++) {
+    if (array[i] != array[array.length - 1 - i]) {
       return false;
     }
   }
