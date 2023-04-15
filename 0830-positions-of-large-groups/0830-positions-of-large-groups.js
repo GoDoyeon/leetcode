@@ -4,24 +4,13 @@
  */
 var largeGroupPositions = function(s) {
     let result = []
-    let values = [...s]
-    let count = 1
-    let input = []
-    values.forEach((value, index) => {
-        if(value === s[index + 1]) {
-            count++
-        } else {
-            count = 1
+    let j = 0
+    for(let i = 0; i < s.length; i++) {
+        if(s[i] !== s[i+1]) {
+            if(i-j+1 >= 3) result.push([j, i])
+            j = i+1
         }
-        if(count === 1 && input.length > 0) {
-            result.push(input)
-            input = []
-        }
-        
-        if(count > 2) {
-            input = [index+2-count, index + 1]
-        }
-    })
+    }
     return result
     
 };
