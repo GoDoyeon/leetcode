@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 var findDisappearedNumbers = function(nums) {
-    const max = Math.max(...nums) > nums.length ? Math.max(...nums) : nums.length
+    const max = nums.length
     const min = 1
     let result = []
     
